@@ -2,21 +2,60 @@
 
 #### Plan && Tracking
 
-|    Date    | Priority |                             Task                             |            Milestone             | Start Time | Duration | End Time |  Result  |
-| :--------: | :------: | :----------------------------------------------------------: | :------------------------------: | :--------: | :------: | :------: | :------: |
-| 2021-03-27 |    00    | (服务器49)在PANDA数据集上对coco预训练的Cascade RCNN进行微调,CATE = 1 |       完成CATE_1模型的训练       |   19:06    |    3h    |  21:06   | 完成训练 |
-| 2021-03-28 |    01    |                 修改201.150服务器ssh配置文件                 |   **解决150服务器SSH断联问题**   |            |          |          |          |
-| 2021-03-28 |    02    | (服务器49)在PANDA数据集上对coco预训练的Cascade RCNN进行微调,CATE =2,3,4 | 完成CATE_2,3,4模型的训练，并提交 |     9      |   12h    |    21    |          |
-| 2021-03-29 |    03    |  在Task1_test中使用不同的滑动窗口大小，测试Validation数据集  |               提交               |  After 02  |          |          |          |
-| 2021-03-29 |    04    |                          GLOU loss                           |               提交               |  After 02  |          |          |          |
-|            |          |                                                              |                                  |            |          |          |          |
-|            |          |                                                              |                                  |            |          |          |          |
-|            |          |                                                              |                                  |            |          |          |          |
-|            |          |                                                              |                                  |            |          |          |          |
-|            |          |                                                              |                                  |            |          |          |          |
-|            |          |                                                              |                                  |            |          |          |          |
-|            |          |                                                              |                                  |            |          |          |          |
-|            |          |                                                              |                                  |            |          |          |          |
+|    Date    | Priority |                             Task                             |            Milestone             |   Start Time    | Duration | End Time |        Result         |
+| :--------: | :------: | :----------------------------------------------------------: | :------------------------------: | :-------------: | :------: | :------: | :-------------------: |
+| 2021-03-27 |    00    | (服务器49)在PANDA数据集上对coco预训练的Cascade RCNN进行微调,CATE = 1 |       完成CATE_1模型的训练       |      19:06      |    3h    |  21:06   |       完成训练        |
+| 2021-03-28 |    02    | (服务器49)在PANDA数据集上对coco预训练的Cascade RCNN进行微调,CATE =2,3,4 | 完成CATE_2,3,4模型的训练，并提交 |        9        |   12h    |    21    | model_01:score:0.2906 |
+| 2021-03-29 |    03    |        model_01+在Task1_test中使用不同的滑动窗口大小         |               提交               |    After 02     |          |          | score: 0.2906->0.3058 |
+| 2021-03-30 |    04    |                          GLOU loss                           |               提交               |    After 02     |          |          |                       |
+| 2021-03-30 |    05    |                Cascade RCNN lr 0.03 batch 12                 |               提交               |                 |          |          |                       |
+|            |    06    |                        比较04和05结果                        |      判断是否添加glou loss       | After 04 and 05 |          |          |                       |
+|            |          |                                                              |                                  |                 |          |          |                       |
+|            |          |                                                              |                                  |                 |          |          |                       |
+|            |          |                                                              |                                  |                 |          |          |                       |
+|            |          |                                                              |                                  |                 |          |          |                       |
+|            |          |                                                              |                                  |                 |          |          |                       |
+|            |          |                                                              |                                  |                 |          |          |                       |
+
+
+
+#### 3-30
+
+今日计划：
+
+- [ ]  EDA：使用panda查看size of bboxs 的分布特点
+- [ ]  ResNet不同深度的结构的区别 ？
+- [ ]  Adjust the setting of anchors to diffrent categories. [mmdetection 代码库中的 anchor 设置原则][https://blog.csdn.net/yangyehuisw/article/details/105373508]
+- [ ]  比较04和05结果
+- [ ]  阅读star_paper
+- [ ]  记录训练结果
+
+明日计划：
+
+- [ ] NMS -> Soft-NMS [mmdetection 模型训练技巧_Guo_Python的博客-CSDN博客](https://blog.csdn.net/Guo_Python/article/details/108148385)
+- [ ] Focal loss [目标检测系列三：奇技淫巧 - 超杰 (spytensor.com)](http://spytensor.com/index.php/archives/53/?telchm=x4e3v1)
+- [ ] Adjust the hyper parameters 自动调参？ [贝叶斯优化(Bayesian Optimization)深入理解 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/53826787)
+- [ ] Train until the eval loss doesn't change
+- [ ] do lr x10 until the loss no longer converge.
+- [ ] *
+   - [ ] 在线难例挖掘（OHEM online hard example mining）
+   - [ ] 骨干网络蒸馏
+   - [ ] 裁剪图片多线程
+   - [ ] TTA, Test time augment
+- [ ] https://zhuanlan.zhihu.com/p/345657476
+- [ ] 将全部数据用于训练
+- [ ] 模型瘦身
+
+# 
+
+#### 3-29
+
+今日计划：
+
+- [ ] **解决150服务器SSH断联问题**
+   - [ ] 修改201.150服务器ssh配置文件
+- [x] Faster rcnn https://zhuanlan.zhihu.com/p/31426458
+- [x] 在Task1_test中使用不同的滑动窗口大小/对图像采用不同的尺寸进行切割，overlap = 0.2 。
 
 
 
@@ -34,21 +73,6 @@
 - [ ] 在Task1_test中使用不同的滑动窗口大小/对图像采用不同的尺寸进行切割，overlap = 0.2 。
 - [x] GLOU loss
 - [x] Save files of models to OneDrive. Name: 01_cascade_rcnn_r101_fpn_1x_coco_lr_0.02_batch_8
-
-明日计划：
-
-- [ ] Adjust the setting of anchors to diffrent categories. [mmdetection 代码库中的 anchor 设置原则][https://blog.csdn.net/yangyehuisw/article/details/105373508]
-- [ ] NMS -> Soft-NMS [mmdetection 模型训练技巧_Guo_Python的博客-CSDN博客](https://blog.csdn.net/Guo_Python/article/details/108148385)
-- [ ] Focal loss [目标检测系列三：奇技淫巧 - 超杰 (spytensor.com)](http://spytensor.com/index.php/archives/53/?telchm=x4e3v1)
-- [ ] Adjust the hyper parameters [贝叶斯优化(Bayesian Optimization)深入理解 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/53826787)
-- [ ] Train until the eval loss doesn't change
-- [ ] *
-   - [ ] 在线难例挖掘（OHEM online hard example mining）
-   - [ ] 骨干网络蒸馏
-   - [ ] 裁剪图片多线程
-   - [ ] TTA, Test time augment
-- [ ] 将全部数据用于训练
-- [ ] 模型瘦身
 
 # 
 
