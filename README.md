@@ -23,11 +23,11 @@
 
 今日计划：
 
-- [ ]  EDA：使用panda查看size of bboxs 的分布特点
+- [x]  使用pandas进行EDA，查看size of bboxs 的分布特点
 - [ ]  ResNet不同深度的结构的区别 ？
 - [ ]  Adjust the setting of anchors to diffrent categories. [mmdetection 代码库中的 anchor 设置原则][https://blog.csdn.net/yangyehuisw/article/details/105373508]
 - [ ]  比较04和05结果
-- [ ]  阅读star_paper
+- [x]  阅读star_paper
 - [ ]  记录训练结果
 
 明日计划：
@@ -45,6 +45,10 @@
 - [ ] https://zhuanlan.zhihu.com/p/345657476
 - [ ] 将全部数据用于训练
 - [ ] 模型瘦身
+- [ ] 肌电手势识别算法应用方案V0.2
+- [ ] Surface-Electromyography-Based Gesture Recognition by Multi-view Deep Learning
+- [ ] sEMG-Based Gesture Recognition With Embedded Virtual Hand Poses and Adversarial Learning
+- [ ] star_paper
 
 # 
 
@@ -120,5 +124,6 @@
 2. 阅读关于模型训练的调参技巧
 3. 整理TOP2的Blogs中可能有用的tricks
 4. 图片增广
+
 
 
