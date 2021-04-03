@@ -5,9 +5,9 @@
 | Date | Priority |        Task        |                 Milestone                  | Start Time | Duration | End Time | Result |
 | :--: | :------: | :----------------: | :----------------------------------------: | :--------: | :------: | :------: | :----: |
 | 4.3  |    01    |    Train VFNet     |           Submit the new result            |    4.1     |  2 days  |   4.3    |        |
-| 4.4  |    02    | Read paper *VFNet* | Find some trick that can be added to VFNet |   16:15    | 45 mins  |  17:00   |        |
-| 4.3  |    03    |  Automatic tuning  |                Can I use it                |   17:05    | 25 mins  |  17:30   |        |
-| 4.3  |    04    |      DanceNet      |         Understand the main ideas          |   18:00    | 45 mins  |  18:45   |        |
+| 4.4  |    02    | Read paper *VFNet* | Find some trick that can be added to VFNet |   17:40    | 40 mins  |  18:20   |        |
+| 4.3  |    03    |  Automatic tuning  |                Can I use it                |   19:00    | 25 mins  |  19:30   |        |
+| 4.3  |    04    |      DanceNet      |         Understand the main ideas          |   19:30    | 45 mins  |  20:00   |        |
 |      |          |                    |                                            |            |          |          |        |
 |      |          |                    |                                            |            |          |          |        |
 |      |          |                    |                                            |            |          |          |        |
@@ -35,8 +35,8 @@
 
 今日计划：
 
-- [ ] 01 - Train VFNet
-- [ ] 02 - Read paper *VFNet*
+- [x] 01 - Train VFNet
+- [x] 02 - Read paper *VFNet*
 - [ ] 03 - Automatic tuning
 - [ ] 04 - DanceNet https://mp.weixin.qq.com/s/MOksw35ddu8QRtZoOzMl0A
 
