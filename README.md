@@ -2,22 +2,45 @@
 
 #### Plan && Tracking
 
-|    Date    | Priority |                             Task                             |            Milestone             |   Start Time    | Duration | End Time |        Result         |
-| :--------: | :------: | :----------------------------------------------------------: | :------------------------------: | :-------------: | :------: | :------: | :-------------------: |
-| 2021-03-27 |    00    | (服务器49)在PANDA数据集上对coco预训练的Cascade RCNN进行微调,CATE = 1 |       完成CATE_1模型的训练       |      19:06      |    3h    |  21:06   |       完成训练        |
-| 2021-03-28 |    02    | (服务器49)在PANDA数据集上对coco预训练的Cascade RCNN进行微调,CATE =2,3,4 | 完成CATE_2,3,4模型的训练，并提交 |        9        |   12h    |    21    | model_01:score:0.2906 |
-| 2021-03-29 |    03    |        model_01+在Task1_test中使用不同的滑动窗口大小         |               提交               |    After 02     |          |          | score: 0.2906->0.3058 |
-| 2021-03-30 |    04    |                          GLOU loss                           |               提交               |    After 02     |          |          |                       |
-| 2021-03-30 |    05    |                Cascade RCNN lr 0.03 batch 12                 |               提交               |                 |          |          |                       |
-|            |    06    |                        比较04和05结果                        |      判断是否添加glou loss       | After 04 and 05 |          |          |                       |
-|            |          |                                                              |                                  |                 |          |          |                       |
-|            |          |                                                              |                                  |                 |          |          |                       |
-|            |          |                                                              |                                  |                 |          |          |                       |
-|            |          |                                                              |                                  |                 |          |          |                       |
-|            |          |                                                              |                                  |                 |          |          |                       |
-|            |          |                                                              |                                  |                 |          |          |                       |
+| Date | Priority |        Task        |                 Milestone                  | Start Time | Duration | End Time | Result |
+| :--: | :------: | :----------------: | :----------------------------------------: | :--------: | :------: | :------: | :----: |
+| 4.3  |    01    |    Train VFNet     |           Submit the new result            |    4.1     |  2 days  |   4.3    |        |
+| 4.4  |    02    | Read paper *VFNet* | Find some trick that can be added to VFNet |   16:15    | 45 mins  |  17:00   |        |
+| 4.3  |    03    |  Automatic tuning  |                Can I use it                |   17:05    | 25 mins  |  17:30   |        |
+| 4.3  |    04    |      DanceNet      |         Understand the main ideas          |   18:00    | 45 mins  |  18:45   |        |
+|      |          |                    |                                            |            |          |          |        |
+|      |          |                    |                                            |            |          |          |        |
+|      |          |                    |                                            |            |          |          |        |
+|      |          |                    |                                            |            |          |          |        |
+|      |          |                    |                                            |            |          |          |        |
+|      |          |                    |                                            |            |          |          |        |
+|      |          |                    |                                            |            |          |          |        |
+|      |          |                    |                                            |            |          |          |        |
+
+后续计划：
+
+- [ ]  [贝叶斯优化(Bayesian Optimization)深入理解 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/53826787)
+- [ ] ACTION-Net https://mp.weixin.qq.com/s/L2_lkhKbVhW8fjAaDdsyWQ
+- [ ] *
+   - [ ] 在线难例挖掘（OHEM online hard example mining）
+   - [ ] 骨干网络蒸馏
+   - [ ] 裁剪图片多线程
+   - [ ] TTA, Test time augment
+- [ ] 将全部数据用于训练
+- [ ] 模型瘦身
 
 
+
+#### 4-2
+
+今日计划：
+
+- [ ] 01 - Train VFNet
+- [ ] 02 - Read paper *VFNet*
+- [ ] 03 - Automatic tuning
+- [ ] 04 - DanceNet https://mp.weixin.qq.com/s/MOksw35ddu8QRtZoOzMl0A
+
+# 
 
 #### 3-30
 
